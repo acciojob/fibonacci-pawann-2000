@@ -17,11 +17,22 @@ app.get("/", (req, res) => {
 
 app.post("/fibnocci", (req, res) => {
   const {n} = req.body;
-  const ans = fibonacci(n);
+  const ans = fibo(n);
   console.log(req.body)
   res.send({ message: ans });
 });
-//your code here
+
+function fibo(num) {
+  let a = 0;
+  let b = 1;
+  for (let index = 0; index < num; index++) {   
+    temp = b;
+    a = a + b;
+    b = temp;
+  }
+  return b;
+}
+
 app.post("/add", (req, res) => {
   const { a, b } = req.body;
   res.status(200).send(a + b);
