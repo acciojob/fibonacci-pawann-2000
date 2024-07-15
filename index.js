@@ -27,8 +27,8 @@ function fibo(num) {
   let b = 1;
   for (let index = 0; index < num; index++) {   
     temp = b;
-    a = a + b;
-    b = temp;
+    b = a + b;
+    a = temp;
   }
   return b;
 }
