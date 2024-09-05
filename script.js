@@ -1,8 +1,4 @@
 function fibonacci(num) {
-  if (num < 0) {
-    throw new Error('Input must be a non-negative integer.');
-  }
-
   if (num === 0) return 0;
   if (num === 1) return 1;
 
